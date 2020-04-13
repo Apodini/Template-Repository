@@ -5,14 +5,14 @@ When creating a new repository make sure to select this repository as a reposito
 ### GitHub Actions
 This repository contains several workflows which require you to provide a GitHub Secret. Secrets are encrypted environment variables that you create in a repository for use with GitHub Actions.
 
-#### Create a personal access token
+#### 1. Create a personal access token
 - Go to your token settings in GitHub (click on `Settings` in the user drop-down menu, then `Developer` settings in the sidebar, then click on `Personal access tokens`)
 - Then click the `Generate token` button.
 - Make sure to copy the access token
 
 ![](images/access_token.png)
 
-#### Create a Secret
+#### 2. Create a secret
 Next, you’ll need to add a new secret to your repository.
 
 - Open the settings for your repository and click `Secrets` in the sidebar
