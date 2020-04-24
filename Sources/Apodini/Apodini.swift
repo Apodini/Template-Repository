@@ -1,3 +1,3 @@
 struct Apodini {
-    var text = "Hello, World!"
+    let text = "Hello, Apodini!"
 }

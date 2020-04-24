@@ -1,6 +1,6 @@
 ## How to use this repository
 ### Template
-When creating a new repository make sure to select this repository as a repository template. ![](images/repository_template.png)
+When creating a new repository make sure to select this repository as a repository template. ![](Images/repository_template.png)
 
 ### GitHub Actions
 This repository contains several workflows which require you to provide a GitHub Secret. Secrets are encrypted environment variables that you create in a repository for use with GitHub Actions.
@@ -10,7 +10,7 @@ This repository contains several workflows which require you to provide a GitHub
 - Then click the `Generate token` button.
 - Make sure to copy the access token
 
-![](images/access_token.png)
+![](Images/access_token.png)
 
 #### 2. Create a secret
 Next, you’ll need to add a new secret to your repository.
@@ -20,7 +20,7 @@ Next, you’ll need to add a new secret to your repository.
 - Paste the copied personal access token into  `Value`
 - Click `Add secret`
 
-![](images/secret.png)
+![](Images/secret.png)
 
 ### ⬆️ Remove everything up to here ⬆️
 
