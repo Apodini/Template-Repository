@@ -20,7 +20,7 @@ Next, you’ll need to add a new secret to your repository.
 - Paste the copied personal access token into  `Value`
 - Click `Add secret`
 
-![](https://github.com/Apodini/Template-Repository/raw/develop/Images/Secret.png)
+![](https://github.com/Apodini/Template-Repository/raw/release/Images/Secret.png)
 
 ### ⬆️ Remove everything up to here ⬆️
 
@@ -33,7 +33,7 @@ Next, you’ll need to add a new secret to your repository.
 ## Usage
 
 ## Contributing
-Contributions to this projects are welcome. Please make sure to read the [contribution guidelines](https://github.com/Apodini/.github/blob/master/CONTRIBUTING.md) first.
+Contributions to this projects are welcome. Please make sure to read the [contribution guidelines](https://github.com/Apodini/.github/blob/release/CONTRIBUTING.md) first.
 
 ## License
-This project is licensed under the MIT License. See [License](https://github.com/Apodini/Template-Repository/blob/master/LICENSE) for more information.
+This project is licensed under the MIT License. See [License](https://github.com/Apodini/Template-Repository/blob/release/LICENSE) for more information.
