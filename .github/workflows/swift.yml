@@ -21,11 +21,11 @@ jobs:
       run: swift test
   linux:
     container:
-      image: swift:${{ matrix.node }}
+      image: swift:${{ matrix.linux }}
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        os: [latest, xenial, focal, amazonlinux2, centos8]
+        linux: [latest, xenial, focal, amazonlinux2, centos8]
     steps:
     - uses: actions/checkout@v2
     - name: Build
