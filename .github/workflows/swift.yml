@@ -7,7 +7,7 @@ on:
     branches: [ develop, release ]
 
 jobs:
-  build:
+  macos:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v2
@@ -19,3 +19,16 @@ jobs:
       run: swift build
     - name: Test
       run: swift test
+  linux:
+    container:
+      image: swift:${{ matrix.node }}
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        os: [latest, xenial, focal, amazonlinux2, centos8]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Build
+      run: swift build
+    - name: Test
+      run: swift test --enable-test-discovery --sanitize=thread
