@@ -28,6 +28,8 @@ jobs:
         linux: [latest, xenial, focal, amazonlinux2, centos8]
     steps:
     - uses: actions/checkout@v2
+    - name: Check version
+      run: swift --version
     - name: Build
       run: swift build
     - name: Test
