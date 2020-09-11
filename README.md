@@ -2,6 +2,14 @@
 ### Template
 When creating a new repository make sure to select this repository as a repository template. ![](https://github.com/Apodini/Template-Repository/raw/develop/Images/RepositoryTemplate.png)
 
+### Customize the repository
+Enter your repository specific configuration
+- Enter your project name instead of "PROJECT_NAME" in .jazzy.yml
+- Remove the "Images" folder
+- Replace the "Package.swift", "Sources" and "Tests" folder with your own Swift Package
+- Update the README with your information
+
+
 ### GitHub Actions
 This repository contains several workflows which require you to provide a GitHub Secret. Secrets are encrypted environment variables that you create in a repository for use with GitHub Actions.
 
@@ -21,6 +29,8 @@ Next, you’ll need to add a new secret to your repository.
 - Click `Add secret`
 
 ![](https://github.com/Apodini/Template-Repository/raw/release/Images/Secret.png)
+
+#### 3. Test all available GitHub Actions
 
 ### ⬆️ Remove everything up to here ⬆️
 
