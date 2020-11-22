@@ -1,7 +1,7 @@
 # Apodini SwiftLint file Apodini
   
 # The whitelist_rules configuration also includes rules that are enabled by default to provide a good overview of all rules.
-whitelist_rules:
+only_rules:
   - anyobject_protocol
     # Prefer using AnyObject over class for class-only protocols.
   - array_init
