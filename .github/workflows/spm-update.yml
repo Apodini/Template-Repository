@@ -1,3 +1,11 @@
+#                   
+# This source file is part of the Apodini open source project
+# 
+# SPDX-FileCopyrightText: 2021 Paul Schmiedmayer and the project authors (see CONTRIBUTORS.md) <paul.schmiedmayer@tum.de>
+# 
+# SPDX-License-Identifier: MIT
+# 
+
 name: Swift Package Update
 
 on:
@@ -8,6 +16,8 @@ on:
 jobs:
   createPR:
     name: Create Pull Request
+    container:
+      image: swiftlang/swift:nightly-5.5-focal
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
@@ -24,6 +34,7 @@ jobs:
         delete-branch: true
         base: develop
         branch: bots/update-dependencies
-        assignees: PSchmiedmayer
-        committer: PSchmiedmayer <PSchmiedmayer@users.noreply.github.com>
-        author: PSchmiedmayer <PSchmiedmayer@users.noreply.github.com>
+        assignees: ApodiniBot
+        committer: ApodiniBot <ApodiniBot@users.noreply.github.com>
+        author: ApodiniBot <ApodiniBot@users.noreply.github.com>
+        reviewers: PSchmiedmayer
