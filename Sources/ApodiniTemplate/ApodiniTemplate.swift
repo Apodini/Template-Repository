@@ -9,6 +9,10 @@
 
 /// Contains a nice text to say hello
 public struct ApodiniTemplate {
-    /// A greeting from the Apodini Template
-    public let text = "Hello, Apodini Template!"
+    /// Generates a greeting from the Apodini Template
+    /// - Parameter name: The name that should be greeted, the default value is `"Apodini Template"`
+    /// - Returns: The greeting created by the Apodini Template
+    public func greet(_ name: String = "Apodini Template") -> String {
+        "Hello, \(name)!"
+    }
 }

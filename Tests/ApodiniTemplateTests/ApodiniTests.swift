@@ -12,6 +12,8 @@ import XCTest
 
 final class ApodiniTemplateTests: XCTestCase {
     func testExample() {
-        XCTAssertEqual(ApodiniTemplate().text, "Hello, Apodini Template!")
+        let template = ApodiniTemplate()
+        XCTAssertEqual(template.greet(), "Hello, Apodini Template!")
+        XCTAssertEqual(template.greet("Paul"), "Hello, Paul!")
     }
 }
