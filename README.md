@@ -27,6 +27,7 @@ Enter your repository specific configuration
 
 [![REUSE Compliance Check](https://github.com/Apodini/Template-Repository/actions/workflows/reuseaction.yml/badge.svg)](https://github.com/Apodini/Template-Repository/actions/workflows/reuseaction.yml)
 [![Build and Test](https://github.com/Apodini/Template-Repository/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Apodini/Template-Repository/actions/workflows/build-and-test.yml)
+[![codecov](https://codecov.io/gh/Apodini/ApodiniTemplate/branch/develop/graph/badge.svg?token=5IIXBQ8OD2)](https://codecov.io/gh/Apodini/ApodiniTemplate)
 
 # Project Name
 
