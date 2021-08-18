@@ -1,3 +1,11 @@
+#                   
+# This source file is part of the Apodini open source project
+# 
+# SPDX-FileCopyrightText: 2021 Paul Schmiedmayer and the project authors (see CONTRIBUTORS.md) <paul.schmiedmayer@tum.de>
+# 
+# SPDX-License-Identifier: MIT
+# 
+
 # Apodini .gitignore File
 
 # Swift Package Manager
@@ -6,14 +14,12 @@ Package.resolved
 .swiftpm
 .build/
 
+# IDE related folders
+.idea
+
 # Xcode User settings
 xcuserdata/
 
 # Other files
 .DS_Store
-
-# Fastlane
-fastlane/report.xml
-fastlane/Preview.html
-fastlane/screenshots/**/*.png
-fastlane/test_output
+.env

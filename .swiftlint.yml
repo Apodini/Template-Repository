@@ -1,3 +1,11 @@
+#                   
+# This source file is part of the Apodini open source project
+#
+# SPDX-FileCopyrightText: 2021 Paul Schmiedmayer and the project authors (see CONTRIBUTORS.md) <paul.schmiedmayer@tum.de>
+#
+# SPDX-License-Identifier: MIT
+#
+
 # Apodini SwiftLint file Apodini
   
 # The whitelist_rules configuration also includes rules that are enabled by default to provide a good overview of all rules.
@@ -309,19 +317,14 @@ only_rules:
     # Don’t include vertical whitespace (empty line) after opening braces.
   - void_return
     # Prefer -> Void over -> ().
-  - weak_delegate
-    # Delegates should be weak to avoid reference cycles.
   - xctfail_message
     # An XCTFail call should include a description of the assertion.
   - yoda_condition
     # The variable should be placed on the left, the constant on the right of a comparison operator.
 
 excluded: # paths to ignore during linting. Takes precedence over `included`.
-  - Carthage
-  - Pods
   - .build
   - .swiftpm
-  - R.generated.swift
 
 closure_body_length: # Closure bodies should not span too many lines.
   - 35 # warning - default: 20
@@ -348,6 +351,12 @@ identifier_name:
     - id
     - ok
     - or
+    - p8
+    - of
+    - s3
+    - at
+    - to
+    - in
 
 large_tuple: # Tuples shouldn't have too many members. Create a custom type instead.
   - 2 # warning - default: 2
