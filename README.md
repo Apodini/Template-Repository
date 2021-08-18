@@ -26,11 +26,11 @@ Enter your repository-specific configuration
 
 ### ⬆️ Remove everything up to here ⬆️
 
+# Project Name
+
 [![REUSE Compliance Check](https://github.com/Apodini/Template-Repository/actions/workflows/reuseaction.yml/badge.svg)](https://github.com/Apodini/Template-Repository/actions/workflows/reuseaction.yml)
 [![Build and Test](https://github.com/Apodini/Template-Repository/actions/workflows/build-and-test.yml/badge.svg)](https://github.com/Apodini/Template-Repository/actions/workflows/build-and-test.yml)
-[![codecov](https://codecov.io/gh/Apodini/ApodiniTemplate/branch/develop/graph/badge.svg?token=5IIXBQ8OD2)](https://codecov.io/gh/Apodini/ApodiniTemplate)
-
-# Project Name
+[![codecov](https://codecov.io/gh/Apodini/Template-Repository/branch/develop/graph/badge.svg?token=5MMKMPO5NR)](https://codecov.io/gh/Apodini/Template-Repository)
 
 ## Requirements
 
