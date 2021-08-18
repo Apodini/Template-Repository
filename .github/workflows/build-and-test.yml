@@ -55,6 +55,11 @@ jobs:
 #      run: xcrun llvm-cov export -format="lcov" .build/debug/ApodiniTemplatePackageTests.xctest/Contents/MacOS/ApodiniTemplatePackageTests -instr-profile .build/debug/codecov/default.profdata > coverage.lcov
 #    - name: Upload coverage to Codecov
 #      uses: codecov/codecov-action@v1
+#    - name: Test Generating Docs
+#      run: |
+#          xcodebuild docbuild -scheme ApodiniTemplate -destination platform=macOS,arch=x86_64 -derivedDataPath ./.xcodebuild
+#          cp -r $(find ./.xcodebuild -type d -name '*.doccarchive') ./ApodiniTemplate.doccarchive
+#          echo "The DocC archive can be found at ./ApodiniTemplate.doccarchive"
   linux:
     name: Linux ${{ matrix.linux }} ${{ matrix.configuration }}
     container:

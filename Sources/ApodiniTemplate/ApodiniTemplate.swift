@@ -6,6 +6,9 @@
 // SPDX-License-Identifier: MIT
 //
 
-struct ApodiniTemplate {
-    let text = "Hello, Apodini Template!"
+
+/// Contains a nice text to say hello
+public struct ApodiniTemplate {
+    /// A greeting from the Apodini Template
+    public let text = "Hello, Apodini Template!"
 }

@@ -13,6 +13,7 @@ Package.resolved
 *.xcodeproj
 .swiftpm
 .build/
+.xcodebuild/
 
 # IDE related folders
 .idea
