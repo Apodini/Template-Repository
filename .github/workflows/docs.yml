@@ -9,10 +9,8 @@
 name: Generate Docs
 
 on:
-  pull_request:
-    branches:
-      - develop
-      - release
+  release:
+    types: [published]
   workflow_dispatch:
 
 jobs:
