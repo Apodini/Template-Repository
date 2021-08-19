@@ -41,6 +41,20 @@ jobs:
           cd docc2html
           git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
           swift run docc2html ../ApodiniTemplate.doccarchive ../docs
+          echo '<!DOCTYPE HTML>
+          <html lang="en-US">
+            <head>
+              <meta charset="UTF-8">
+              <meta http-equiv="refresh" content="0; url=./documentation/apodinitemplate/apodinitemplate/index.html">
+              <script type="text/javascript">
+                window.location.href = "./documentation/apodinitemplate/apodinitemplate/index.html"
+              </script>
+              <title>Documentatoin</title>
+            </head>
+            <body>
+              If you are not redirected automatically, follow this <a href='./documentation/apodinitemplate/apodinitemplate/index.html'>link to the documentation</a>.
+            </body>
+          </html>' > ../docs/index.html
     - name: Deploy to GH Pages
       uses: peaceiris/actions-gh-pages@v3
       with:
