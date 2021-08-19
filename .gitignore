@@ -13,7 +13,6 @@ Package.resolved
 *.xcodeproj
 .swiftpm
 .build/
-.xcodebuild/
 
 # IDE related folders
 .idea
@@ -24,3 +23,9 @@ xcuserdata/
 # Other files
 .DS_Store
 .env
+
+# Documentation generation
+.xcodebuild/
+docs/
+docc2html/
+*.doccarchive

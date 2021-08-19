@@ -35,3 +35,30 @@ jobs:
           xcodebuild docbuild -scheme ApodiniTemplate -destination platform=macOS,arch=x86_64 -derivedDataPath ./.xcodebuild
           cp -r $(find ./.xcodebuild -type d -name '*.doccarchive') ./ApodiniTemplate.doccarchive
           echo "The DocC archive can be found at ./ApodiniTemplate.doccarchive"
+    - name: Create Static HTML pages
+      run: |
+          git clone https://github.com/DoccZz/docc2html.git
+          cd docc2html
+          git checkout $(git describe --tags `git rev-list --tags --max-count=1`)
+          swift run docc2html ../ApodiniTemplate.doccarchive ../docs
+          echo '<!DOCTYPE HTML>
+          <html lang="en-US">
+            <head>
+              <meta charset="UTF-8">
+              <meta http-equiv="refresh" content="0; url=./documentation/apodinitemplate/apodinitemplate/index.html">
+              <script type="text/javascript">
+                window.location.href = "./documentation/apodinitemplate/apodinitemplate/index.html"
+              </script>
+              <title>Documentatoin</title>
+            </head>
+            <body>
+              If you are not redirected automatically, follow this <a href='./documentation/apodinitemplate/apodinitemplate/index.html'>link to the documentation</a>.
+            </body>
+          </html>' > ../docs/index.html
+    - name: Deploy to GH Pages
+      uses: s0/git-publish-subdir-action@v2
+      env:
+        REPO: self
+        BRANCH: gh-pages
+        FOLDER: docs
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
