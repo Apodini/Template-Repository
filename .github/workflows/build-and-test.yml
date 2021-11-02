@@ -46,7 +46,13 @@ jobs:
       run: xcodebuild -scheme ApodiniTemplate -destination platform=macOS -configuration release 'OTHER_SWIFT_FLAGS=-enable-testing -D RELEASE_TEST' test
     - name: Debug Build & Test
       if: matrix.configuration == 'debug'
-      run: xcodebuild -scheme ApodiniTemplate -destination platform=macOS -configuration debug -enableCodeCoverage YES 'OTHER_SWIFT_FLAGS=-D COVERAGE' test
+      run: xcodebuild -scheme ApodiniTemplate -destination platform=macOS -configuration debug -enableCodeCoverage YES -derivedDataPath ./.xcodebuild 'OTHER_SWIFT_FLAGS=-D COVERAGE' test
+    - name: Convert coverage report
+      if: matrix.configuration == 'debug'
+      run: |
+          XCTESTPATH=./.xcodebuild/Build/Products/debug/ApodiniTemplateTests.xctest/Contents/MacOS/ApodiniTemplateTests
+          COVERAGEDATA=$(find ./.xcodebuild -type f -name "Coverage.profdata")
+          xcrun llvm-cov export -format="lcov" $XCTESTPATH -instr-profile $COVERAGEDATA > coverage.lcov
     - name: Upload coverage to Codecov
       if: matrix.configuration == 'debug'
       uses: codecov/codecov-action@v2
