@@ -43,18 +43,17 @@ jobs:
       run: swift build -c release
     - name: Release Build & Test
       if: matrix.configuration == 'release_testing'
-      run: swift test -c release -Xswiftc -enable-testing -Xswiftc -DRELEASE_TESTING
+      run: xcodebuild -scheme ApodiniTemplate -destination platform=macOS -configuration release 'OTHER_SWIFT_FLAGS=-enable-testing -D RELEASE_TEST' test
     - name: Debug Build & Test
       if: matrix.configuration == 'debug'
-      run: swift test -c debug --enable-code-coverage -Xswiftc -DCOVERAGE
-    - name: Convert coverage report
-      if: matrix.configuration == 'debug'
-      run: xcrun llvm-cov export -format="lcov" .build/debug/ApodiniTemplatePackageTests.xctest/Contents/MacOS/ApodiniTemplatePackageTests -instr-profile .build/debug/codecov/default.profdata > coverage.lcov
+      run: xcodebuild -scheme ApodiniTemplate -destination platform=macOS -configuration debug -enableCodeCoverage YES 'OTHER_SWIFT_FLAGS=-D COVERAGE' test
     - name: Upload coverage to Codecov
+      if: matrix.configuration == 'debug'
       uses: codecov/codecov-action@v2
     - name: Test Generating Docs
+      if: matrix.configuration == 'debug'
       run: |
-          xcodebuild docbuild -scheme ApodiniTemplate -destination platform=macOS,arch=x86_64 -derivedDataPath ./.xcodebuild
+          xcodebuild docbuild -scheme ApodiniTemplate -destination platform=macOS -derivedDataPath ./.xcodebuild
           cp -r $(find ./.xcodebuild -type d -name '*.doccarchive') ./ApodiniTemplate.doccarchive
           echo "The DocC archive can be found at ./ApodiniTemplate.doccarchive"
   linux:
