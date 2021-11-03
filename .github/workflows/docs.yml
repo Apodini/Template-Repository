@@ -30,6 +30,6 @@ jobs:
       run: xcodebuild -version
     - name: Check Swift version
       run: swift --version
-    - uses: pschmiedmayer/docc2html@main
+    - uses: DoccZz/docc2ghpages@main
       with:
         scheme: ApodiniTemplate
