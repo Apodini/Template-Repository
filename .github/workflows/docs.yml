@@ -33,4 +33,3 @@ jobs:
     - uses: pschmiedmayer/docc2html@main
       with:
         scheme: ApodiniTemplate
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
