@@ -12,7 +12,8 @@ public struct ApodiniTemplate {
     /// Generates a greeting from the Apodini Template
     /// - Parameter name: The name that should be greeted, the default value is `"Apodini Template"`
     /// - Returns: The greeting created by the Apodini Template
-    public func greet(_ name: String = "Apodini Template") -> String {
-        "Hello, \(name)!"
+    public func greet(_ name: String = "Apodini Template") async throws -> String {
+        try await Task.sleep(nanoseconds: 500_000_000) // 0.5 seconds
+        return "Hello, \(name)!"
     }
 }
