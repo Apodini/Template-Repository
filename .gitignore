@@ -13,6 +13,8 @@ Package.resolved
 *.xcodeproj
 .swiftpm
 .build/
+.xcodebuild/
+coverage.lcov
 
 # IDE related folders
 .idea
@@ -25,7 +27,6 @@ xcuserdata/
 .env
 
 # Documentation generation
-.xcodebuild/
 docs/
 docc2html/
 *.doccarchive
