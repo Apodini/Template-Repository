@@ -6,7 +6,7 @@
 # SPDX-License-Identifier: MIT
 #
 
-name: Pull Request Workflows
+name: Pull Request
 
 on:
   pull_request:
