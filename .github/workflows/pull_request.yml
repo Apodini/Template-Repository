@@ -14,10 +14,13 @@ on:
 
 jobs:
   build_and_test:
+    name: Build and Test
     uses: Apodini/.github/.github/workflows/build-and-test.yml@main
     with:
       packagename: ApodiniTemplate
   reuse_action:
+    name: REUSE Compliance Check
     uses: Apodini/.github/.github/workflows/reuse.yml@main
   swiftlint:
+    name: SwiftLint
     uses: Apodini/.github/.github/workflows/swiftlint.yml@main

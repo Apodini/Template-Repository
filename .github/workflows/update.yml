@@ -14,5 +14,6 @@ on:
   workflow_dispatch:
 
 jobs:
-  reuse_action:
+  spm_update:
+    name: Swift Package Update
     uses: Apodini/.github/.github/workflows/spm-update.yml@main
