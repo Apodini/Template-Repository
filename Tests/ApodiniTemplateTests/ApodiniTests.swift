@@ -28,6 +28,6 @@ final class ApodiniTemplateTests: XCTestCase {
             XCTAssertEqual(secondGreeting, "Hello, Paul!")
         }
 
-        wait(for: [expectation], timeout: 1.1)
+        wait(for: [expectation], timeout: 1.25)
     }
 }
