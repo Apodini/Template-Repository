@@ -6,17 +6,16 @@
 # SPDX-License-Identifier: MIT
 #
 
-name: Release Drafter
+name: Release
 
 on:
-  push:
-    branches:
-      - develop
+  release:
+    types: [published]
+  workflow_dispatch:
 
 jobs:
-  update_release_draft:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: release-drafter/release-drafter@v5
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  docs:
+    name: Generate Docs
+    uses: Apodini/.github/.github/workflows/docs.yml@main
+    with:
+      packagename: ApodiniTemplate
