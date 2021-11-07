@@ -17,7 +17,7 @@ When creating a new repository, make sure to select this repository as a reposit
 
 Enter your repository-specific configuration
 - Replace the "Package.swift", "Sources" and "Tests" folder with your Swift Package
-- Enter the correct Swift Package name (currently "ApodiniTemplate") in the pull_request.yml and release.yml files.
+- Enter the correct Swift Package name (currently "ApodiniTemplate") in the build.yml, pull_request.yml and release.yml files.
 - Update the DocC documentation to reflect the name of the new Swift package and adapt the docs and build and test GitHub Actions where the documentation is generated to the updated names to be sure the DocC generation works as expected 
 - Update the README with your information and replace the links to the license with the new repository.
 - Update the status badges to point to the GitHub actions of your repository.
