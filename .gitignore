@@ -25,3 +25,8 @@ xcuserdata/
 # Other files
 .DS_Store
 .env
+
+# Documentation generation
+docs/
+docc2html/
+*.doccarchive

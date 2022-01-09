@@ -14,4 +14,4 @@ SPDX-License-Identifier: MIT
 
 ## Overview
 
-This is an example for a [DocC](https://developer.apple.com/documentation/docc) documentation for the ApodiniTemplate package.
+This is an example for a DocC documentation for the ApodiniTemplate package.
